@@ -1,0 +1,142 @@
+edges:
+  (ITMX.fr.o<ITMX.bk.i): ITMX.bk.t
+  (ITMX.bk.o<ITMX.fr.i): ITMX.fr.t
+  (ITMX.fr.o<ITMX.fr.i): ITMX.fr.r
+  (ITMX.bk.o<ITMX.bk.i): ITMX.bk.r
+  (ETMX.fr.o<ETMX.fr.i): ETMX.fr.r
+  (ETMX.bk.o<ETMX.bk.i): ETMX.bk.r
+  (ETMX.bk.o<ETMX.fr.i): ETMX.fr.t
+  (ETMX.fr.o<ETMX.bk.i): ETMX.bk.t
+  (ETMX.pos<ETMX.fr.i): ETMX.fr.xq.i
+  (ETMX.pos<ETMX.fr.o): ETMX.fr.xq.o
+  (ETMX.pos<ETMX.bk.i): ETMX.bk.xq.i
+  (ETMX.pos<ETMX.bk.o): ETMX.bk.xq.o
+  (ETMX.fr.o<ETMX.pos): ETMX.fr.px
+  (ETMX.bk.o<ETMX.pos): ETMX.bk.px
+  (ETMX.fr.i.tp<ETMX.fr.i): '1'
+  (ETMX.fr.o.tp<ETMX.fr.o): '1'
+  (ETMX.bk.i.tp<ETMX.bk.i): '1'
+  (ETMX.bk.o.tp<ETMX.bk.o): '1'
+  (ETMX.pos.tp<ETMX.pos): 1s
+  (ETMX.pos<ETMX.pos.exc): 1s
+  (ITMY.fr.o<ITMY.bk.i): ITMY.bk.t
+  (ITMY.bk.o<ITMY.fr.i): ITMY.fr.t
+  (ITMY.fr.o<ITMY.fr.i): ITMY.fr.r
+  (ITMY.bk.o<ITMY.bk.i): ITMY.bk.r
+  (ETMY.fr.o<ETMY.bk.i): ETMY.bk.t
+  (ETMY.bk.o<ETMY.fr.i): ETMY.fr.t
+  (ETMY.fr.o<ETMY.fr.i): ETMY.fr.r
+  (ETMY.bk.o<ETMY.bk.i): ETMY.bk.r
+  (BS.bkA.o<BS.frA.i): BS.t
+  (BS.frA.o<BS.bkA.i): BS.t
+  (BS.bkB.o<BS.frB.i): BS.t
+  (BS.frB.o<BS.bkB.i): BS.t
+  (BS.frB.o<BS.frA.i): BS.fr.r
+  (BS.frA.o<BS.frB.i): BS.fr.r
+  (BS.bkA.o<BS.bkB.i): BS.bk.r
+  (BS.bkB.o<BS.bkA.i): BS.bk.r
+  (PRM.fr.o<PRM.bk.i): PRM.bk.t
+  (PRM.bk.o<PRM.fr.i): PRM.fr.t
+  (PRM.fr.o<PRM.fr.i): PRM.fr.r
+  (PRM.bk.o<PRM.bk.i): PRM.bk.r
+  (PRM.bk.i<PRM.bk.i.exc): '1'
+  (SEM.fr.o<SEM.bk.i): SEM.bk.t
+  (SEM.bk.o<SEM.fr.i): SEM.fr.t
+  (SEM.fr.o<SEM.fr.i): SEM.fr.r
+  (SEM.bk.o<SEM.bk.i): SEM.bk.r
+  (EX.fr.i<IX.fr.o): XARM.L
+  (IX.fr.i<EX.fr.o): XARM.L
+  (IX.bk.i<BS.bkA.o): BSX.L
+  (BS.bkA.i<IX.bk.o): BSX.L
+  (EY.fr.i<IY.fr.o): YARM.L
+  (IY.fr.i<EY.fr.o): YARM.L
+  (IY.bk.i<BS.frB.o): BSY.L
+  (BS.frB.i<IY.bk.o): BSY.L
+  (PRM.fr.i<BS.frA.o): PRC.L
+  (BS.frA.i<PRM.fr.o): PRC.L
+  (SEM.fr.i<BS.bkB.o): SEC.L
+  (BS.bkB.i<SEM.fr.o): SEC.L
+derivatives: []
+reduce_list: []
+G_nodes:
+  ITMX.bk.i:
+    pos: [21.0, 5.000000000000001]
+  ITMX.fr.o:
+    pos: [29.0, 4.999999999999999]
+  ITMX.fr.i:
+    pos: [29.0, -5.000000000000001]
+  ITMX.bk.o:
+    pos: [21.0, -4.999999999999999]
+  ETMX.fr.i:
+    pos: [49.0, 7.0]
+  ETMX.fr.o:
+    pos: [49.0, -7.0]
+  ETMX.bk.i:
+    pos: [61.0, -7.0]
+  ETMX.bk.o:
+    pos: [61.0, 7.0]
+  ETMX.pos:
+    pos: [55.0, 0.0]
+  ETMX.fr.i.tp:
+    pos: [46.0, 10.0]
+  ETMX.fr.o.tp:
+    pos: [46.0, -10.0]
+  ETMX.bk.i.tp:
+    pos: [64.0, -10.0]
+  ETMX.bk.o.tp:
+    pos: [64.0, 10.0]
+  ETMX.pos.tp:
+    pos: [46.0, 0.0]
+  ETMX.pos.exc:
+    pos: [64.0, 0.0]
+  ITMY.bk.i:
+    pos: [-5.000000000000001, 21.0]
+  ITMY.fr.o:
+    pos: [-4.999999999999999, 29.0]
+  ITMY.fr.i:
+    pos: [5.000000000000001, 29.0]
+  ITMY.bk.o:
+    pos: [4.999999999999999, 21.0]
+  ETMY.bk.i:
+    pos: [5.0, 59.0]
+  ETMY.fr.o:
+    pos: [5.0, 51.0]
+  ETMY.fr.i:
+    pos: [-5.0, 51.0]
+  ETMY.bk.o:
+    pos: [-5.0, 59.0]
+  BS.frA.i:
+    pos: [-10.0, 5.0]
+  BS.bkA.o:
+    pos: [10.0, 5.0]
+  BS.bkA.i:
+    pos: [10.0, -5.0]
+  BS.frA.o:
+    pos: [-10.0, -5.0]
+  BS.frB.i:
+    pos: [5.0, 10.0]
+  BS.bkB.o:
+    pos: [5.0, -10.0]
+  BS.bkB.i:
+    pos: [-5.0, -10.0]
+  BS.frB.o:
+    pos: [-5.0, 10.0]
+  PRM.bk.i:
+    pos: [-29.0, 5.000000000000001]
+  PRM.fr.o:
+    pos: [-21.0, 4.999999999999999]
+  PRM.fr.i:
+    pos: [-21.0, -5.000000000000001]
+  PRM.bk.o:
+    pos: [-29.0, -4.999999999999999]
+  PRM.bk.i.exc:
+    pos: [-40.0, 10.000000000000002]
+  SEM.bk.i:
+    pos: [-5.000000000000001, -29.0]
+  SEM.fr.o:
+    pos: [-4.999999999999999, -21.0]
+  SEM.fr.i:
+    pos: [5.000000000000001, -21.0]
+  SEM.bk.o:
+    pos: [4.999999999999999, -29.0]
+G_edges: {}
