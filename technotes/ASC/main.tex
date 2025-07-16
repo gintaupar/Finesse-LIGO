@@ -1,0 +1,65 @@
+% ===========  Advanced LIGO .tex document
+% -> needs ligodoc.cls
+
+\documentclass[colorlinks=true,pdfstartview=FitV,linkcolor=blue,
+            citecolor=magenta,urlcolor=red]{ligodoc}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{longtable}
+\usepackage{rotating}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{fancyhdr}
+\usepackage{mhchem}
+\usepackage[capitalise]{cleveref}
+\usepackage{xspace}
+
+\usepackage[
+    range-phrase=--,
+    range-units=single,
+    retain-explicit-plus=false,
+    retain-unity-mantissa=false,
+    detect-weight=true,
+    detect-family=true,
+]{siunitx}
+
+\newcommand{\rmi}{\mathrm{i}}
+\newcommand{\rme}{\mathrm{e}}
+\newcommand{\Finesse}{\textsc{Finesse}\xspace}
+
+\DeclareSIUnit{\ppm}{ppm}
+\DeclareSIUnit{\partspermillion}{ppm}
+\DeclareSIUnit{\D}{D}
+\DeclareSIUnit{\diopter}{D}
+\DeclareSIUnit{\dioptre}{D}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{ASC Modelling}
+
+\author{Elenna Capote, Daniel Brown, Kevin Kuns, Evan Hall, others.}
+
+\ligodccnumber{T}{??}{?????}{v?}{?} \ligodistribution{ISC Group}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\tableofcontents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abstract
+\clearpage
+\input{intro}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+\bibliographystyle{unsrt}
+\bibliography{biblio.bib}
+
+\end{document}
+
+
+
+
+

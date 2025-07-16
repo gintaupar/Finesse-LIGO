@@ -1,0 +1,90 @@
+# Aaron Goodwin-Jones is updating this and keeping the new one in 
+# ligo-commissioning-modelling/follow_the_leader
+#python /home/raed.diab/ligo-commissioning-modeling/scripts/data_munch.py -v  /home/raed.diab/ligo-commissioning-modeling/scripts/H1_chans.yaml data_1355860950.pkl
+Channels:
+  - Name: H1:IMC-IM4_TRANS_NSUM_OUT16
+    Purpose: Input Power # Finesse: Pin
+    RawUnit:
+    Calibration:
+      type: factor # could also be zpk
+      unit: W
+  - Name: H1:ASC-AS_C_SUM_OUT16
+    Purpose: AS Power  # Finesse: Pas
+    RawUnit:
+    Calibration:
+      type: factor
+      unit: cts/mW
+  - Name: H1:LSC-REFL_A_LF_OUT16
+    Purpose: Total PRM Refl Power # Finesse: Prefl
+    RawUnit:
+    Calibration:
+      type:
+      unit: W
+  - Name: H1:LSC-POP_A_LF_OUT16
+    Purpose: Pick-off PRC Power  # Finesse: Ppop
+    RawUnit:
+    Calibration:
+      type: factor
+      unit: W
+  - Name: H1:LSC-PR_GAIN_OUT16
+    Purpose: Power Recycling Gain # Finesse: PRG
+    RawUnit:
+    Calibration:
+      type: factor
+      unit:
+  - Name: H1:LSC-POPAIR_B_RF18_I_MON
+    Purpose: PRG for 9MHz SBs # Finesse: ??
+    RawUnit:
+    Calibration:
+      type:
+      unit:
+  - Name: H1:LSC-POPAIR_B_RF90_I_MON
+    Purpose: PRG for 45MHz SBs # Finesse: ??
+    RawUnit:
+    Calibration:
+      type:
+      unit:
+  - Name: H1:ASC-X_PWR_CIRC_OUT16 #Check this
+    Purpose: XArm Power # Finesse: (AGX + AGY)/2
+    RawUnit:
+    Calibration:
+      type:
+      unit:
+  - Name: H1:ASC-Y_PWR_CIRC_OUT16 #not sure what this is
+    Purpose: YArm Power # Finesse: (AGX + AGY)/2
+    RawUnit:
+    Calibration:
+      type:
+      unit:
+  - Name: H1:CAL-CS_TDEP_KAPPA_C_OUTPUT #
+    Purpose: Optical Gain
+    RawUnit:
+    Calibration:
+      type:
+      unit:
+  # - Name: H1:OMC-DCPD_SUM_OUT16
+  #   Purpose: OMC DCPD OUT16
+  #   RawUnit:
+  #   Calibration:
+  #     type:
+  #     unit:
+  # - Name: H1:SQZ-DCPD_RATIO_4_DB_MON
+  #   Purpose: SQZ BLRMs
+  #   RawUnit:
+  #   Calibration:
+  #     type:
+  #     unit:
+
+Spans:
+  #- [1388642900, 1388648300]
+  # - [1388642418, 1388656818] 
+  # - [1386028818, 1386034818]
+  # - [1364106000, 1364112000]
+  # - [1355860950, 1355866950]
+  # - [1387450260, 1387456260] #this is not bad except that PRG9 and 45 drop to zero
+  # - [1387523788, 1387529788]
+  # - [1366815000, 1366821000]
+  # - [1356987643, 1356993643]
+  # - [1364262321, 1364268321] #March 31,2023.. it's a good time
+  - [1418487006, 1418493006] #Dec 17,2024.. it's a good time
+
