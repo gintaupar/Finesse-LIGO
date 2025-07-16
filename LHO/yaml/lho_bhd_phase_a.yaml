@@ -1,0 +1,392 @@
+# LHO parameter file for BHD Phase A configuration
+# Internal interferometer lengths from: E1300128-v4
+# Optic values from Galaxy page
+
+INPUT:
+  LASER:
+    power: 60
+    f1: 9100230 # 9MHz frequency
+    mod_depth_9: 0.18
+    mod_depth_45: 0.18
+    mod_depth_118: 0.024
+
+  IMC:
+    MC1:
+      ID: IMCF09
+      T: 6030.0e-6
+      L: 20e-6 # guess
+      AOI: 44.59 # [deg]
+      Rc: .inf
+    MC2:
+      ID: IMCC02
+      T: 5.0e-6
+      L: 20.0e-6 # guess
+      AOI: 0.82 # [deg]
+      Rc: 27.275
+    MC3:
+      ID: IMCF03
+      T: 6370.0e-6
+      L: 20e-6 # guess
+      AOI: 44.59 # [deg]
+      Rc: .inf
+
+    # From old FINESSE file
+    length_MC1_MC2: 16.24057
+    length_MC2_MC3: 16.24057
+    length_MC3_MC1: 0.465
+  IFI:
+  IM1:
+    T: 0
+    L: 0
+    Rc: .inf
+    AOI: 53
+  IM2:
+    T: 0
+    L: 0
+    Rc: 12.8
+    AOI: 7
+  IM3:
+    T: 0
+    L: 0
+    Rc: -6.24
+    AOI: 7.1
+  IM4:
+    T: 0
+    L: 0
+    Rc: .inf
+    AOI: 45
+
+  # Lengths from https://dcc.ligo.org/DocDB/0142/T1700227 [1]
+  # Length from old finesse file, distance from IMC output AR surface to IM2 [2]
+  length_IMC_IM1: 0.4282 # [2]
+  length_IM1_IM2: 1.2938 # [2]
+  length_IM2_IFI: 0.260 # [1]
+  length_IFI_IM3: 0.91 # [1]
+  length_IM3_IM4: 1.175 # [1]
+  length_IM4_PRM_AR: 0.413 # [1]
+
+  Telescope:
+    IM2_REFL:
+      T: 0
+      L: 0
+      Rc: 12.8
+    LossyMirror:
+      T: 0.0125 # one 10% splitter and 3 50/50 splitters
+      L: 0
+    RM1:
+      T: 800e-6
+      L: 0
+      Rc: 1.7
+    RM2:
+      T: 800e-6
+      L: 0
+      Rc: -0.6
+    M5:
+      T: 800e-6
+      L: 0
+      Rc: 1.7
+    M6:
+      T: 0.5
+      L: 0
+    REFL_L101:
+      f: 333.6e-3
+    REFL_L102:
+      f: -166.8e-3
+    WFS_REFL_BS:
+      T: 0.5
+      L: 0
+    LSC_REFL_BS:
+      T: 0.5
+      L: 0
+
+    length_IFI_IM2_REFL: 260e-3
+    length_IM2_REFL_LossyMirror: 0
+    length_LossyMirror_RM1: 4159.5e-3
+    length_RM1_RM2: 838e-3
+    length_RM2_M5: 910e-3
+    length_M5_M6: 0
+    length_M6_L101: 1220e-3
+    length_L101_L102: 203e-3
+    length_L102_WFS_BS: 0
+    length_WFS_BS_ASC_A: 836e-3
+    length_WFS_BS_ASC_B: 468e-3
+
+PRC:
+  PRM:
+    ID: PRM04
+    Rc: -10.948
+    T: 0.031
+    L: 0
+    thickness: 75.0e-3
+  PRMAR:
+    Rc: .inf
+    T: 1
+    L: 0
+  PR2:
+    ID: PR204
+    Rc: -4.543
+    T: 230.0e-6
+    L: 0
+    AOI: 0.79 # [deg]
+  PR3:
+    ID: PR301
+    Rc: 36.021
+    T: 4.0e-6
+    L: 0
+    AOI: 0.615 # [deg]
+  # Total measured length back in 2014 https://alog.ligo-wa.caltech.edu/aLOG/index.php?callRep=10642
+  length_PRM_PR2: 16608.6e-3
+  length_PR2_PR3: 16162.6e-3
+  length_PR3_BS: 19537.4e-3
+
+SRC:
+  SRM:
+    ID: SRM06
+    Rc: -5.678
+    T: 0.3234
+    L: 0
+    thickness: 75.0e-3
+  SRMAR:
+    Rc: .inf
+    T: 1
+    L: 0
+  SR2:
+    ID: SR203
+    Rc: -6.424
+    T: 7.5e-6
+    L: 0
+    AOI: 0.87 # [deg]
+  SR3:
+    ID: SR302
+    Rc: 36.013
+    T: 3.5e-6
+    L: 0
+    AOI: 0.785 # [deg]
+  # total length https://alog.ligo-wa.caltech.edu/aLOG/index.php?callRep=18651
+  length_SRM_SR2: 15740.0e-3
+  length_SR2_SR3: 15460.1e-3
+  length_SR3_BS: 19365.8e-3
+
+BS:
+  T: 0.5
+  L: 0
+  R_AR: 0
+  thickness: 60.41e-3
+  AOI: 45 # [deg]
+
+X:
+  CP:
+    ID: CP01
+    thickness: 99.82e-3
+    cold_focal_length: 664.0e+3
+
+  ITM:
+    ID: ITM07
+    T: 0.015
+    thickness: 200.22e-3
+    Rc: 1940.3
+    cold_focal_length: -310812
+
+  ETM:
+    ID: ETM13
+    T: 4.0e-6
+    Rc: 2244.2
+
+  arm_loss: 60e-6
+  length_arm: 3994.485 # D0901920-v13
+  length_BS_CP: 4829.6e-3
+  length_CP_TM: 20.0e-3
+
+Y:
+  CP:
+    ID: CPO4
+    thickness: 99.82e-3
+    cold_focal_length: 69.6e+3
+
+  ITM:
+    ID: ITM01
+    T: 0.015
+    thickness: 199.64e-3
+    Rc: 1940.2
+    cold_focal_length: -92780
+
+  ETM:
+    ID: ETM16
+    T: 4.0e-6
+    Rc: 2246.9
+
+  arm_loss: 60e-6
+  length_arm: 3994.485 # D0901920-v13
+  length_BS_CP: 4847.8e-3
+  length_CP_TM: 20.0e-3
+
+OUTPUT:
+  OFI:
+  OFIlens:
+    fx: -13.193 # m; E2300235; Massey & Siegman (f = -13.333 m with AOI = 8.3 deg)
+    fy: -13.474 # m; as above
+  OM0:
+    T: 0 # wrong
+    L: 0
+    AOI: 42.9 # deg; E2100036-v19
+    Rc: .inf
+  OM1:
+    T: 800.0e-6 # wrong
+    L: 0
+    AOI: 40.5 # deg; E2100036-v19
+    Rc: .inf
+  OM2:
+    T: 0 # wrong
+    L: 0
+    AOI: 10.0 # deg; E2100036-v19
+    Rc: 5.556 # G2100149-v8, slide 49. Static preloading of PSAMS can be altered.
+  OM3:
+    T: 0.01 # wrong
+    L: 0
+    AOI: 9.9 # deg; E2100036-v19
+    Rc: 2.326 # G2100149-v8, slide 49. Static preloading of PSAMS can be altered.
+
+  # https://dcc.ligo.org/LIGO-E2100383-v3
+  # A+_D0901129_23 AUG 2021, OM1-3 +SRM and OMC PRISM.STEP
+  length_SRM_OFI: 0.9046
+  length_OFI_OFIlens: 0.2154 # m; E2300253-v1 gives 1.120 m as length from SRM to OFIlens
+  # The following are extracted from LIGO-E2100036-v19 (Zemax model)
+  length_OFIlens_OM0: 1.285 # m
+  length_OM0_OM1: 1.165 # m
+  length_OM1_OM2: 1.220 # m
+  length_OM2_OM3: 1.591 # m
+  length_OM3_OMC: 1.074 # m
+
+  Telescopes:
+    # Adds in AS WFS path on transmission of OM3, 1 lens L101,
+    # 1 beamsplitter M101 and AS A and B
+    # References: DCC D1000342 and T1000247
+    AS_A_B:
+      AS_L101:
+        f: 334e-3
+      AS_M101:
+        R: 0.5
+        T: 0.5
+
+      length_OM3_L101: 605e-3
+      length_L010_M101: 0  # "?"
+      length_M101_AS_A: 191e-3
+      length_M101_AS_B: 475e-3
+
+    # AS_C QPD (includes lens and beamsplitter)
+    # Reference: T1200410
+    AS_C:
+      AS_L1:
+        f: 334e-3
+      AS_M6:
+        R: 0.5
+        T: 0.5
+
+      length_OM1_M6: 0  # "?"
+      length_M6_L1: 670e-3
+      length_L1_AS_C: 225e-3
+
+OMC:
+  IC: # input coupler
+    T: 0.0076
+    L: 10.0e-6
+    AOI: 2.7609 # [deg]
+    Rc: .inf
+  OC: # output coupler
+    T: 0.0075
+    L: 10.0e-6
+    AOI: 2.7609 # [deg]
+    Rc: .inf
+  CM1: # curved mirror 1
+    T: 36.0e-6
+    L: 10.0e-6
+    AOI: 4.004 # [deg]
+    Rc: 2.57321
+  CM2: # curved mirror 2
+    T: 35.9e-6
+    L: 10.0e-6
+    AOI: 4.004 # [deg]
+    Rc: 2.57369
+
+  length_IC_OC: 0.2815
+  length_OC_CM1: 0.2842
+  length_CM1_CM2: 0.2815
+  length_CM2_IC: 0.2842
+
+SQZ:
+  db: 10
+  angle: 0
+
+  FC:
+    FC1:
+      T: 1e-3
+      Rc: .inf
+      Rc_AR: 1
+      thickness: 72.46e-3 # FIM02 appears to have been installed
+                  # https://alog.ligo-wa.caltech.edu/aLOG/index.php?callRep=59118
+                  # Thickness 72.46mm (LIGO-C2000156)
+    FC2:
+      T: 1e-6
+      Rc: 534
+      Rc_AR: 1
+      thickness: 78e-3
+    length_FC: 297.85
+    FC_loss: 20e-6
+    fdetune: -36
+
+  ZM1:
+    T: 0
+    L: 0
+    Rc: .inf
+    alpha: 68
+  ZM2:
+    T: 0
+    L: 0
+    Rc: 0.85
+    alpha: 3.2
+  ZM3:
+    T: 0
+    L: 0
+    Rc: .inf
+    alpha: 27.5
+  ZM4:
+    T: 0
+    L: 0
+    Rc: -13.33
+    alpha: 15.5
+  ZM5:
+    T: 0
+    L: 0
+    Rc: 3.4
+    alpha: 5
+  ZM6:
+    T: 0
+    L: 0
+    Rc: .inf
+    alpha: 118.5
+  length_ZM1_ZM2: 1.499
+  length_ZM2_ZM3: 1.829
+  length_ZM3_FC1: 0.991
+  length_ZM4_ZM5: 1.681
+  length_ZM5_ZM6: 4.69
+  length_ZM6_OFI: 1.269
+  length_VIP_ZM1: 0.158
+  length_VIP_ZM4: 1.086
+
+TRANSMON:
+  M1:
+    AOI: 30
+    Rc: 4
+  M2:
+    Rc: -0.2
+  L1:
+    f: 0.333
+  L2:
+    f: -0.11
+  length_ETM_M1: 1
+  length_M1_M2: 1.9026
+  length_M2_L1: 1.0974
+  length_L1_L2: 0.24
+  length_L2_M3: 0.1
+  length_M3_QPD1: 0.31
+  length_M3_QPD2: 0.61

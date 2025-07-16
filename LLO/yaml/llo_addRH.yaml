@@ -1,0 +1,17 @@
+# Additional Ring Heater parameters.
+# Add to model using:
+# factory.update_parameters(finesse.ligo.git_path() / "LLO" / "yaml" / "llo_addRH.yaml")
+# LLO alog#69567 Settings: ITMX 1.2W; ITMY 1.0W; ETMX 2.2W;  ETMY 2.4W.
+
+# ring heater powers [W]
+P_RH_ITMX : 1.2
+P_RH_ITMY : 1.0
+P_RH_ETMX : 2.2
+P_RH_ETMY : 2.4
+
+# defocus of substrate lens and surface deformations [D / W]
+# from Hot Stuff Googledoc -- see LIGO-T2500154
+IRH_sub : -9.92e-6
+IRH_srf: 0.992e-6
+ERH_sub : -12.53e-6
+ERH_srf : 0.841e-6

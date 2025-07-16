@@ -1,0 +1,394 @@
+# LLO O4 parameter file
+# Internal interferometer lengths from: E1300128-v4
+# Optic values from Galaxy page
+
+INPUT:
+  LASER:
+    power: 64
+    f1: 9099055 # 9MHz frequency
+    mod_depth_9: 0.135
+    mod_depth_45: 0.175
+    mod_depth_118: 0.024
+
+  IMC:
+    MC1:
+      ID: IMCF01
+      T: 6150.0e-6
+      L: 20e-6 # guess
+      AOI: 44.59 # [deg]
+      Rc: 101609
+    MC2:
+      ID: IMCC03
+      T: 3.5e-6
+      L: 20.0e-6 # guess
+      AOI: 0.82 # [deg]
+      Rc: 27.178
+    MC3:
+      ID: IMCF02
+      T: 6130.0e-6
+      L: 20e-6 # guess
+      AOI: 44.59 # [deg]
+      Rc: 171747
+
+    # From old FINESSE file
+    length_MC1_MC2: 16.24057
+    length_MC2_MC3: 16.24057
+    length_MC3_MC1: 0.465
+  IFI:
+  IM1:
+    T: 0
+    L: 0
+    Rc: .inf
+    AOI: 53
+  IM2:
+    T: 0
+    L: 0
+    Rc: 12.8
+    AOI: 7
+  IM3:
+    T: 0
+    L: 0
+    Rc: -6.24
+    AOI: 7.1
+  IM4:
+    T: 0
+    L: 0
+    Rc: .inf
+    AOI: 45
+
+
+  # Lengths from https://dcc.ligo.org/DocDB/0142/T1700227 [1]
+  # Length from old finesse file, distance from IMC output AR surface to IM2 [2]
+  length_IMC_IM1: 0.4282 # [2]
+  length_IM1_IM2: 1.2938 # [2]
+  length_IM2_IFI: 0.260 # [1]
+  length_IFI_IM3: 0.91 # [1]
+  length_IM3_IM4: 1.175 # [1]
+  length_IM4_PRM_AR: 0.413 # [1]
+
+  Telescope:
+    IM2_REFL:
+      T: 0
+      L: 0
+      Rc: 12.8
+    LossyMirror:
+      T: 0.0125
+      L: 0
+    RM1:
+      T: 800e-6
+      L: 0
+      Rc: 1.7
+    RM2:
+      T: 800e-6
+      L: 0
+      Rc: -0.6
+    M5:
+      T: 800e-6
+      L: 0
+      Rc: 1.7
+    M6:
+      T: 0.5
+      L: 0
+    REFL_L101:
+      f: 333.6e-3
+    REFL_L102:
+      f: -166.8e-3
+    WFS_REFL_BS:
+      T: 0.5
+      L: 0
+    LSC_REFL_BS:
+      T: 0.5
+      L: 0
+
+    length_IFI_IM2_REFL: 260e-3
+    length_IM2_REFL_LossyMirror: 0
+    length_LossyMirror_RM1: 4159.5e-3
+    length_RM1_RM2: 838e-3
+    length_RM2_M5: 910e-3
+    length_M5_M6: 0
+    length_M6_L101: 1220e-3
+    length_L101_L102: 203e-3
+    length_L102_WFS_BS: 0
+    length_WFS_BS_ASC_A: 836e-3
+    length_WFS_BS_ASC_B: 468e-3
+
+PRC:
+  PRM:
+    ID: PRM02
+    Rc: -11.009
+    T: 0.031
+    L: 0
+    thickness: 75.0e-3
+  PRMAR:
+    Rc: .inf
+    T: 1
+    L: 0
+  PR2:
+    ID: PR202
+    Rc: -4.548
+    T: 234.0e-6
+    L: 0
+    AOI: 0.79 # [deg]
+  PR3:
+    ID: PR303
+    Rc: 36.027
+    T: 5.3e-6
+    L: 0
+    AOI: 0.615 # [deg]
+  length_PRM_PR2: 16610.7e-3 # E1300128-v4
+  length_PR2_PR3: 16164.6e-3 # E1300128-v4
+  length_PR3_BS: 19537.5e-3 # E1300128-v4
+
+SRC:
+  SRM:
+    ID: SRM03
+    Rc: -5.637
+    T: 0.324
+    L: 0
+    thickness: 75.0e-3
+  SRMAR:
+    Rc: .inf
+    T: 1
+    L: 0
+  SR2:
+    ID: SR203 # not in galaxy, not in E1100927, asked garylinn, using LHO number
+    Rc: -6.424
+    T: 7.5e-6
+    L: 0
+    AOI: 0.87 # [deg]
+  SR3:
+    ID: SR301
+    Rc: 35.97
+    T: 3.5e-6
+    L: 0
+    AOI: 0.785 # [deg]
+  length_SRM_SR2: 15756.2e-3
+  length_SR2_SR3: 15443.5e-3
+  length_SR3_BS: 19366.0e-3
+
+BS:
+  ID: BS02
+  T: 0.5
+  L: 0
+  R_AR: 0
+  thickness: 59.88e-3
+  AOI: 45 # [deg]
+
+X:
+  CP:
+    ID: CP06
+    thickness: 100.31e-3
+    cold_focal_length: 136997200
+
+  ITM:
+    ID: ITM04
+    T: 0.0148
+    thickness: 200.27e-3
+    Rc: 1937.9
+    cold_focal_length: 304989
+
+  ETM:
+    ID: ETM08
+    T: 7.1e-6
+    Rc: 2240.0
+
+  arm_loss: 75e-6
+  length_arm: 3994.485 # D0902216-v13
+  length_BS_CP: 4829.5e-3
+  length_CP_TM: 20.0e-3
+
+Y:
+  CP:
+    ID: CPO3
+    thickness: 100.03e-3
+    cold_focal_length: 69565
+
+  ITM:
+    ID: ITM08
+    T: 0.0148
+    thickness: 199.61e-3
+    Rc: 1940.7
+    cold_focal_length: -82424
+
+  ETM:
+    ID: ETM07
+    T: 7.6e-6
+    Rc: 2236.3
+
+  arm_loss: 75e-6
+  length_arm: 3994.485 # D0901920-v13
+  length_BS_CP: 4847.7e-3
+  length_CP_TM: 20.0e-3
+
+OUTPUT:
+  OFI:
+  OM1:
+    T: 800.0e-6
+    L: 0
+    AOI: 2.251 # [deg]
+    Rc: 4.6
+  OM2:
+    T: 0
+    L: 0
+    AOI: 4.399 # [deg]
+    Rc: 1.7058
+  OM3:
+    T: 0.01
+    L: 0
+    AOI: 30.037 # [deg]
+    Rc: .inf
+
+  # https://dcc.ligo.org/DocDB/0180/E2200033/005/LLO_coords_E2200033-v5.pdf
+  # SRM 75mm thick
+  # SRM AR -> OM1 = 3451mm - 75mm = 3376mm
+  length_SRM_OFI: 0.839 # 914mm - 75mm
+  length_OFI_OM1: 2.537 # 3376 - 839
+  length_OM1_OM2: 1.396
+  length_OM2_OM3: 0.632
+  # 0.276+0.03 OMC3 distance to OMC via breadboard tombstone
+  # rough guess it's 3cm from the OMC input coupler mirror
+  length_OM3_OMC: 0.307 # includes 10mm of OMC input optic substrate
+
+  Telescopes:
+    # Adds in AS WFS path on transmission of OM3, 1 lens L101,
+    # 1 beamsplitter M101 and AS A and B
+    # References: DCC D1000342 and T1000247
+    AS_A_B:
+      AS_L101:
+        f: 334e-3
+      AS_M101:
+        R: 0.5
+        T: 0.5
+
+      length_OM3_L101: 605e-3
+      length_L010_M101: 0  # "?"
+      length_M101_AS_A: 191e-3
+      length_M101_AS_B: 475e-3
+
+    # AS_C QPD (includes lens and beamsplitter)
+    # Reference: T1200410
+    AS_C:
+      AS_L1:
+        f: 334e-3
+      AS_M6:
+        R: 0.5
+        T: 0.5
+
+      length_OM1_M6: 0  # "?"
+      length_M6_L1: 670e-3
+      length_L1_AS_C: 225e-3
+
+OMC:
+  IC: # input coupler
+    T: 0.0076
+    L: 10.0e-6
+    AOI: 2.7609 # [deg]
+    Rc: .inf
+  OC: # output coupler
+    T: 0.0075
+    L: 10.0e-6
+    AOI: 2.7609 # [deg]
+    Rc: .inf
+  CM1: # curved mirror 1
+    T: 36.0e-6
+    L: 10.0e-6
+    AOI: 4.004 # [deg]
+    Rc: 2.57321
+  CM2: # curved mirror 2
+    T: 35.9e-6
+    L: 10.0e-6
+    AOI: 4.004 # [deg]
+    Rc: 2.57369
+
+  length_IC_OC: 0.2815
+  length_OC_CM1: 0.2842
+  length_CM1_CM2: 0.2815
+  length_CM2_IC: 0.2842
+
+SQZ:
+  db: 10
+  angle: 0
+
+  FC:
+    FC1:
+      T: 1e-3
+      Rc: .inf
+      Rc_AR: 1
+      thickness: 72.5e-3 # FIM04 appears to have been installed
+                         # https://alog.ligo-la.caltech.edu/aLOG/index.php?callRep=56299
+                         # 72.46 mm reported in quality control reports (C2000157)
+    FC2:
+      T: 1e-6
+      Rc: 534
+      Rc_AR: 1
+      thickness: 78e-3
+    length_FC: 297.85
+    FC_loss: 20e-6
+    fdetune: -36
+
+  ZM1:
+    T: 0
+    L: 0
+    Rc: .inf
+    alpha: 68
+  ZM2:
+    T: 0
+    L: 0
+    Rc: 0.85
+    alpha: 3.2
+  ZM3:
+    T: 0
+    L: 0
+    Rc: .inf
+    alpha: 27.5
+  ZM4:
+    T: 0
+    L: 0
+    Rc: -13.33
+    alpha: 15.5
+  ZM5:
+    T: 0
+    L: 0
+    Rc: 3.4
+    alpha: 5
+  ZM6:
+    T: 0
+    L: 0
+    Rc: .inf
+    alpha: 118.5
+
+  # Design distances from T1900649-v8
+  # Measure distances from D1900274-v4 (which was updated for this purpose)
+  # Measure distance are measured in the CAD with Begum.Kabagoz and Jancarlo.Sanchez
+  # See also https://alog.ligo-la.caltech.edu/aLOG/index.php?callRep=71618
+                        # Design               | Measured LLO
+  length_ZM1_ZM2: 1.5052 # 59.0 In (1422 mm)   | 1505.2 mm (see NOTE1)
+  length_ZM2_ZM3: 1.8959 # 72.0 In (1828 mm)   | 72.28 In (1895.9 mm)
+  length_ZM3_FC1: 0.9905 # 39.0 In (990 mm)    | 990.5 mm (See NOTE3)
+  length_ZM4_ZM5: 1.6963 # 66.19 In (1618.2 mm)| 1696.25
+  length_ZM5_ZM6: 4.996 # 186.3 In (4732mm)    | 4996.6 mm (196.7 in) (Checked by Eddie)
+  length_ZM6_OFI: 1.269 #
+  length_VIP_ZM1: 0.158 #
+  length_VIP_ZM4: 1.086 #
+  # NOTES:
+  # NOTE1: 59.66" - 0.5*(5mm optic thickness)
+  # NOTE3: 1027.43 mm - 0.5*(73.9 optic thickness) = 990.5 mm
+  # NOTE4: 1696.25 - 5mm =
+
+TRANSMON:
+  M1:
+    AOI: 30
+    Rc: 4
+  M2:
+    Rc: -0.2
+  L1:
+    f: 0.333
+  L2:
+    f: -0.11
+  length_ETM_M1: 1
+  length_M1_M2: 1.9026
+  length_M2_L1: 1.0974
+  length_L1_L2: 0.24
+  length_L2_M3: 0.1
+  length_M3_QPD1: 0.31
+  length_M3_QPD2: 0.61

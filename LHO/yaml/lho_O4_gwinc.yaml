@@ -1,0 +1,46 @@
+# O4 LHO updated March 2024
++inherit: "../../gwinc_ifos/LIGO"
+
+Laser:
+  ArmPower: 350e3                 # W, possibly calcualted with nds data
+
+Optics:
+  Loss: 40e-6                     # average per mirror power loss
+  BSLoss: 3000e-6                 # power loss near beamsplitter
+
+  Curvature:                      # ROC
+    ITM: 1934
+    ETM: 2245
+
+  ITM:
+    Transmittance: 0.0146
+  ETM:
+    Transmittance: 5e-6
+  PRM:
+    Transmittance: 0.031
+  SRM:
+    Transmittance: 0.325
+
+  PhotoDetectorEfficiency: 0.85    # AS port readout efficiency approx'd as photo-detector quantum efficiency
+  Quadrature:
+    dc: 1.3962634                 # demod/detection/homodyne phase # (-10+90)*np.pi/180
+    #dc: 1.384                    # O4a, (-10.7+90)*np.pi/180, hd angle -10.7 deg from LHO:71913 8/3, 60W, hot OM2, contrast defect measurement
+
+Squeezer:
+  Type: 'Freq Dependent'
+  AmplitudedB: 17                 # SQZ amplitude [dB], possibly calculated with nds data
+  InjectionLoss: 0.073            # power loss along sqz injection path (incl. opo escape eff, ham7 losses, ofi: sqz-ifo)
+  SQZAngleRMS: 25e-3              # quadrature phase noise [radians], O4a LHO:73747
+  LOAngleRMS: 25e-3
+  SQZAngle: 0.175                 # shot noise sqz is nominally at the dc homodyne readout angle, (sqz-hd_angle)=0 
+  # SQZAngle: 0.187               # O4a = +10.7*np.pi/180. 
+
+  # Parameters for frequency dependent squeezing
+  FilterCavity:
+    L: 297.55                     # cavity length
+    Te: 1e-6                      # end mirror transmission
+    Lrt: 50e-6                    # round-trip loss in the cavity
+    fdetune: -36                  # detuning [Hz], possbily calculated with nds data
+    Ti: 0.850e-3                  # input mirror transmission [Power]  # vendor spec: 0.909e-3 
+    Lrms: 1e-12                   # RMS length noise
+    #Rot: 0                       # phase rotation after cavity

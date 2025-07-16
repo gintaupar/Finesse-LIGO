@@ -1,0 +1,25 @@
+# Changes after MCMC fitting for matching RC geometry
+# to SRC/PRC Gouy Phase measurements:
+# - https://alog.ligo-wa.caltech.edu/aLOG/index.php?callRep=66215
+# - https://alog.ligo-wa.caltech.edu/aLOG/index.php?callRep=66211
+PRC:
+  PRM:
+    Rc: -10.94800
+  PR2:
+    Rc: -4.54339
+  PR3:
+    Rc: 36.02052
+  length_PRM_PR2: 16.60864
+  length_PR2_PR3: 16.16626
+  length_PR3_BS:  19.53370
+
+SRC:
+  SRM:
+    Rc: -5.678
+  SR2:
+    Rc: -6.42454
+  SR3:
+    Rc: 36.01226
+  length_SRM_SR2: 15.74010
+  length_SR2_SR3: 15.46574
+  length_SR3_BS: 19.36580 

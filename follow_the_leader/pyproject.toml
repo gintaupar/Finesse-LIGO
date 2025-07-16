@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools", "setuptools_scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+#[tool.setuptools_scm]
+#write_to = "src/follow_the_leader/_version.py"
+
+[tool.doc8]
+# Documentation line length consistent with Black, and roughly maximum to avoid
+# horizontal scrollbars appearing in code/preformatted blocks.
+max-line-length = 88

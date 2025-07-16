@@ -1,0 +1,43 @@
+# Beginings of squeezer model, lacks the smaller optics and isolator between the
+# FC and OFI currently
+
+# References
+# [1] https://dcc.ligo.org/DocDB/0163/D1900436
+# [2] https://galaxy.ligo.caltech.edu/optics/
+# [3] https://alog.ligo-wa.caltech.edu/aLOG/index.php?callRep=60411
+
+m FC1AR R=0 L=88u Rc=-1
+m FC1 T-1006u Rc=-14672 # FIM02
+m FC2 T=1.8u Rc=532.5 # FEM04
+cav cavFC FC1.p2.o
+
+bs ZM1 T=0 R=1
+bs ZM2 T=0 R=1 Rc=0.85 # PSAMS
+bs ZM3 T=0 R=1
+bs ZM4 T=0 R=1 Rc=13.33 # PSAMS
+bs ZM5 T=0 R=1 Rc=3.4 # PSAMS
+bs ZM6 Rc=inf R=1 T=0
+
+link(
+    ZM1,
+    58.53*25.4m,
+    ZM2,
+    72*25.4m,
+    ZM3,
+    39*25.4m,
+    FC1AR,
+    72.7e-3,
+    FC1,
+    297.85, 
+    FC2
+)
+
+# [3] -2.634+0.863i  -2.587+0.835i
+
+link(
+    ZM4,
+    66.19*25.4m,
+    ZM5,
+    184.64*25.4m,
+    ZM6,
+)

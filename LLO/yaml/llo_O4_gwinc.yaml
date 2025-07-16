@@ -1,0 +1,50 @@
+# O4 LLO updated March 2024 from LIGO-T2300439
++inherit: "../../gwinc_ifos/LIGO"
+
+Laser:
+  ArmPower: 257200.0
+
+Optics:
+  BSLoss: 0.0005
+  Curvature:
+    ETM: 2238
+    ITM: 1940
+  ETM:
+    Transmittance: 5.0e-06
+  ITM:
+    Transmittance: 0.0148
+  Loss: 3.75e-05
+  MM_ARM_SRC: 0.026730064086633115
+  MM_ARM_SRCphi: 0.0
+  MM_IFO_OMC: 0.036
+  MM_IFO_OMCphi: -0.8813912722571364
+  PRM:
+    Transmittance: 0.03
+  PhotoDetectorEfficiency: 0.92
+  Quadrature:
+    dc: 1.3788101090755203
+  SRM:
+    SRCGouy_rad: 0.7504915783575616
+    Transmittance: 0.325
+    Tunephase: 0.0024434609527920616
+
+Squeezer:
+  AmplitudedB: 17.4
+  FilterCavity:
+    L: 300.0
+    L_mm: 0.002
+    Lrms: 1.7e-13
+    Lrt: 0.0001002750920904294
+    Rot: 0.0
+    Te: 1.0e-06
+    Ti: 0.000797
+    fdetune: -25.6
+    psi_mm: -1.143190660056286
+  InjectionLoss: 0.071
+  LOAngleRMS: 0.027
+  MM_SQZ_OMC: 0.011
+  MM_SQZ_OMCphi: -0.7853981633974483
+  SQZAngle: 0.1832595714594046
+  SQZAngleRMS: 0.027
+  Type: Freq Dependent
+  direct_mm_sqz_ifo: 0.0

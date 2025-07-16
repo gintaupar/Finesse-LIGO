@@ -1,0 +1,102 @@
+Channels:
+  - Name: L1:IMC-IM4_TRANS_SUM_OUTPUT
+    Purpose: Input Power
+    Finesse: Pin
+    RawUnit:
+    Calibration:
+      type: factor # could also be zpk
+      unit: W
+      value: 1 # this is a default
+    Limits: # limits are applied AFTER calibration
+      high: 100
+      low: 1e-6
+  - Name: L1:ASC-X_TR_B_NSUM_OUTPUT
+    Purpose: Power in the x arm
+    Comment: A PDs are clipped. 
+    Finesse: Px
+    Calibration:
+      type: factor # could also be zpk
+      unit: W
+      value: 8.559196745830729 # I think this came from a Valery elog
+    Limits:
+      high: 3e6
+      low: 1e-15
+  - Name: L1:ASC-Y_TR_B_NSUM_OUTPUT
+    Purpose: Power in the x arm
+    Comment: A PDs are clipped. 
+    Finesse: Py
+    Calibration:
+      type: factor # could also be zpk
+      unit: W
+      value: 10.84229109624241 # I think this came from a Valery elog
+    Limits:
+      high: 3e6
+      low: 1e-15
+  - Name: L1:GRD-ISC_LOCK_STATE_N.min,s-trend
+    Purpose: Guardian State
+    Finesse: Guard
+  - Name: L1:ASC-AS_C_SUM_OUTPUT
+    Purpose: AS Power
+    Finesse: Pas
+    RawUnit:
+    Calibration:
+      type: factor
+      unit: cts/mW
+      value: 1 #this is a default
+  - Name: L1:LSC-REFL_A_LF_OUTPUT
+    Purpose: Total PRM Refl Power 
+    Finesse: Prefl
+  - Name: L1:LSC-POP_A_LF_OUTPUT
+    Purpose: Pick-off PRC Power  # 
+    Finesse: Ppop
+  - Name: L1:LSC-PRC_GAIN_MON
+    Purpose: Power Recycling Gain # 
+    Finesse: PRG
+    RawUnit:
+    Calibration:
+      type: factor
+      unit: W
+      value: 0.92 # IFO readback is 8% too high. Anamaria Personal Communication
+  - Name: L1:LSC-POPAIR_B_RF18_I_MON
+    Purpose: PRG for 9MHz SBs # Finesse: ??
+    RawUnit:
+    Calibration:
+      type:
+      unit:
+  - Name: L1:LSC-POPAIR_B_RF90_I_MON
+    Purpose: PRG for 45MHz SBs # Finesse: ??
+    RawUnit:
+    Calibration:
+      type:
+      unit:
+  - Name: L1:CAL-CS_TDEP_KAPPA_C_OUTPUT
+    Purpose: Arm gain # Finesse: (AGX + AGY)/2
+    RawUnit:
+    Calibration:
+      type:
+      unit:
+  - Name: L1:CAL-CS_TDEP_F_C_OUTPUT
+    Purpose: Coupled cavity pole # Finesse: ??
+    RawUnit:
+    Calibration:
+      type:
+      unit:
+  - Name: L1:OMC-DCPD_SUM_OUTPUT
+    Purpose: OMC DCPD Output
+    RawUnit:
+    Calibration:
+      type:
+      unit:
+  - Name: L1:SQZ-DCPD_RATIO_4_DB_MON
+    Purpose: SQZ BLRMs
+    RawUnit:
+    Calibration:
+      type:
+      unit:
+
+Spans:
+  #- [1388643918, 1388647818]
+  #- [1388642900, 1388648300]
+  # - [1388642418, 1388656818] 
+  - [1400352800, 1400367200]
+
