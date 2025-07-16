@@ -1,0 +1,21 @@
+Universe = vanilla
+Executable = /home/shreejit.jadhav/WORK/RC/ligo-commissioning-modeling/analysis/O4/Indep_Param_Study/execute_script.sh
+Output = /home/shreejit.jadhav/WORK/RC/ligo-commissioning-modeling/analysis/O4/Indep_Param_Study/logs/logs_$(VAL9)/log_$(VAL0).out.$(Cluster).$(Process)
+Error = /home/shreejit.jadhav/WORK/RC/ligo-commissioning-modeling/analysis/O4/Indep_Param_Study/logs/logs_$(VAL9)/log_$(VAL0).err.$(Cluster).$(Process)
+Log = /home/shreejit.jadhav/WORK/RC/ligo-commissioning-modeling/analysis/O4/Indep_Param_Study/logs/logs_$(VAL9)/log_$(VAL0).log.$(Cluster).$(Process)
+
+Arguments = $(VAL0) $(VAL1) $(VAL2) $(VAL3) $(VAL4) $(VAL5) $(VAL6) $(VAL7) $(VAL8) $(VAL9)
+
+requirements = ( OpSys == "LINUX" )
+request_memory = 8192
+request_disk = 4096M
+request_cpus = 1
+accounting_group = ligo.prod.o4.sec.modeling.finesse
+notification = never
+getenv = true
+Should_transfer_files = Yes
++MaxHours = 240
+x509userproxy = /tmp/x509up_u45022
+
+# queue jobs
+Queue VAL0,VAL1,VAL2,VAL3,VAL4,VAL5,VAL6,VAL7,VAL8,VAL9 from %%input_args_file%%

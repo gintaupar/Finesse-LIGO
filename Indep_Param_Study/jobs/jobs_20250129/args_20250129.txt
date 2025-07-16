@@ -1,0 +1,9 @@
+1,-8,-8,-80,-40,-80,-40,15,/analysis/O4/GA_State_Optimization/data/run_20250129/cold_state_yaml_solutions/cold_state_sol_0.yaml,20250129
+2,-8.5,-8.5,-80,-40,-80,-40,15,/analysis/O4/GA_State_Optimization/data/run_20250129/cold_state_yaml_solutions/cold_state_sol_0.yaml,20250129
+3,-9,-9,-80,-40,-80,-40,15,/analysis/O4/GA_State_Optimization/data/run_20250129/cold_state_yaml_solutions/cold_state_sol_0.yaml,20250129
+4,-9.5,-9.5,-80,-40,-80,-40,15,/analysis/O4/GA_State_Optimization/data/run_20250129/cold_state_yaml_solutions/cold_state_sol_0.yaml,20250129
+5,-10,-10,-80,-40,-80,-40,15,/analysis/O4/GA_State_Optimization/data/run_20250129/cold_state_yaml_solutions/cold_state_sol_0.yaml,20250129
+6,-10.5,-10.5,-80,-40,-80,-40,15,/analysis/O4/GA_State_Optimization/data/run_20250129/cold_state_yaml_solutions/cold_state_sol_0.yaml,20250129
+7,-11,-11,-80,-40,-80,-40,15,/analysis/O4/GA_State_Optimization/data/run_20250129/cold_state_yaml_solutions/cold_state_sol_0.yaml,20250129
+8,-11.5,-11.5,-80,-40,-80,-40,15,/analysis/O4/GA_State_Optimization/data/run_20250129/cold_state_yaml_solutions/cold_state_sol_0.yaml,20250129
+9,-12,-12,-80,-40,-80,-40,15,/analysis/O4/GA_State_Optimization/data/run_20250129/cold_state_yaml_solutions/cold_state_sol_0.yaml,20250129
